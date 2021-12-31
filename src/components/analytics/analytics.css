@@ -1,0 +1,74 @@
+.analyticsContainer {
+  width: 450px;
+  box-shadow: 4px 0 2px -2px #00000012;
+}
+.accountDetails {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 398px;
+  height: 152px;
+  background: #fcf9ff 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+  box-shadow: 0 4px 2px -2px #00000012;
+}
+.amount {
+  text-align: center;
+  font: normal normal 600 36px/55px Poppins;
+  letter-spacing: 0px;
+  color: #5e419a;
+  opacity: 1;
+}
+.date {
+  text-align: center;
+  font: normal normal medium 12px/18px Poppins;
+  letter-spacing: 0px;
+  color: #7b728d;
+  opacity: 1;
+}
+.transactionButtons {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.tTitle {
+  padding-top: 30px;
+  padding-left: 20px;
+  text-align: left;
+  font: normal normal medium 14px/21px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.expence {
+  width: 200px;
+  height: 48px;
+  background: #fff5df 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border: none;
+  color: #ecaa11;
+}
+.income {
+  width: 199px;
+  height: 48px;
+  background: #ecaa11 0% 0% no-repeat padding-box;
+  border-radius: 0px 8px 8px 0px;
+  opacity: 1;
+  border: none;
+  color: #fff5df;
+}
+.expenseAnalytics {
+  margin-top: 20px;
+  width: 398px;
+  height: 152px;
+  margin-bottom: 20px;
+}
+.incomeAnalytics {
+  width: 398px;
+  height: 152px;
+}

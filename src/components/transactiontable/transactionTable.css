@@ -1,0 +1,43 @@
+.table {
+  margin-left: 20px;
+  width: 95%;
+  /* border:1px solid $color-form-highlight; */
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+  /* padding:($half-spacing-unit * 1.5) 0; */
+}
+
+.table-data {
+  flex: 1 1 20%;
+  text-align: left;
+  font: normal normal 600 16px/25px Poppins;
+  letter-spacing: 0px;
+  color: #5e419a;
+  opacity: 1;
+}
+.editIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #eee4f8 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+  margin-right: 10px;
+}
+.deleteicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  margin-right: 50px;
+  background: #ffeef4 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+}
