@@ -6,9 +6,11 @@ import "./transactionTable.css";
 const TransactionTable = () => {
   const baseT = [];
   const [AllTransactions, setAllTransactions] = useState([]);
+  const [isDeleted, setIsDeleted] = useState(false);
   const { statusValue, setStatusValue } = useContext(trasactionStatusContext);
   const { idValue, setIdValue } = useContext(trasactionStatusContext);
   const { amount, setAmount } = useContext(trasactionStatusContext);
+
   const getAllTransactions = async () => {
     try {
       const response = await axios.get(`${url.getTransaction}`);
@@ -38,11 +40,22 @@ const TransactionTable = () => {
       console.log(error);
     }
   };
+  const deleteTransaction = async (transactionId) => {
+    try {
+      const response = await axios.delete(
+        `${url.postTrasaction}/${transactionId}`
+      );
+      console.log(response.data);
+      setIdValue(idValue);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   getTransactions(idValue);
   useEffect(() => {
     getAllTransactions();
-  }, []);
+  });
   const DataTable = (props) => {
     return (
       <>
@@ -66,10 +79,17 @@ const TransactionTable = () => {
             </div>
 
             <div className="editIcon">
-              <i className="fas fa-pen" style={{ color: "#5e419a" }}></i>
+              <i
+                className="fas fa-pen"
+                style={{ color: "#5e419a", cursor: "pointer" }}
+              ></i>
             </div>
             <div className="deleteicon">
-              <i class="fas fa-times" style={{ color: "purple" }}></i>
+              <i
+                onClick={() => deleteTransaction(data.id)}
+                class="fas fa-times"
+                style={{ color: "purple", cursor: "pointer" }}
+              ></i>
             </div>
           </div>
         ))}
